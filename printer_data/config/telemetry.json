@@ -1,0 +1,1109 @@
+{
+  "id": "3c96680fd1c549cab7cc10bebc8b6049",
+  "version": "v0.12.0-538-ga38d9eb1",
+  "branch": "main",
+  "cpu_info": "4 core ?",
+  "platform": {
+    "machine": "aarch64",
+    "os_release": {
+      "NAME": "Debian GNU/Linux",
+      "ID": "debian",
+      "PRETTY_NAME": "Debian GNU/Linux 12 (bookworm)",
+      "VERSION_ID": "12",
+      "VERSION": "12 (bookworm)",
+      "VERSION_CODENAME": "bookworm",
+      "HOME_URL": "https://www.debian.org/",
+      "SUPPORT_URL": "https://www.debian.org/support",
+      "BUG_REPORT_URL": "https://bugs.debian.org/"
+    },
+    "version": "#1 SMP PREEMPT Debian 1:6.6.51-1+rpt3 (2024-10-08)",
+    "python": "3.11.2 (main, Sep 14 2024, 03:00:30) [GCC 12.2.0]"
+  },
+  "config": {
+    "virtual_sdcard": [
+      "path",
+      "on_error_gcode"
+    ],
+    "pause_resume": [],
+    "display_status": [],
+    "respond": [],
+    "gcode_macro CANCEL_PRINT": [
+      "description",
+      "rename_existing",
+      "gcode"
+    ],
+    "gcode_macro PAUSE": [
+      "description",
+      "rename_existing",
+      "gcode"
+    ],
+    "gcode_macro RESUME": [
+      "description",
+      "rename_existing",
+      "variable_last_extruder_temp",
+      "variable_restore_idle_timeout",
+      "variable_idle_state",
+      "gcode",
+      "variable_zhop",
+      "variable_etemp"
+    ],
+    "gcode_macro SET_PAUSE_NEXT_LAYER": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro SET_PAUSE_AT_LAYER": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro SET_PRINT_STATS_INFO": [
+      "rename_existing",
+      "description",
+      "variable_pause_next_layer",
+      "variable_pause_at_layer",
+      "gcode"
+    ],
+    "gcode_macro _TOOLHEAD_PARK_PAUSE_CANCEL": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro _CLIENT_EXTRUDE": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro _CLIENT_RETRACT": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro _CLIENT_LINEAR_MOVE": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro GET_TIMELAPSE_SETUP": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro _SET_TIMELAPSE_SETUP": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro TIMELAPSE_TAKE_FRAME": [
+      "description",
+      "variable_enable",
+      "variable_takingframe",
+      "variable_park",
+      "variable_extruder",
+      "variable_speed",
+      "variable_verbose",
+      "variable_check_time",
+      "variable_restore",
+      "variable_macro",
+      "variable_is_paused",
+      "gcode"
+    ],
+    "gcode_macro _TIMELAPSE_NEW_FRAME": [
+      "description",
+      "gcode"
+    ],
+    "delayed_gcode _WAIT_TIMELAPSE_TAKE_FRAME": [
+      "gcode"
+    ],
+    "gcode_macro HYPERLAPSE": [
+      "description",
+      "variable_cycle",
+      "variable_run",
+      "gcode"
+    ],
+    "delayed_gcode _HYPERLAPSE_LOOP": [
+      "gcode"
+    ],
+    "gcode_macro TIMELAPSE_RENDER": [
+      "description",
+      "variable_render",
+      "variable_run_identifier",
+      "gcode"
+    ],
+    "delayed_gcode _WAIT_TIMELAPSE_RENDER": [
+      "gcode"
+    ],
+    "gcode_macro TEST_STREAM_DELAY": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro print_start": [
+      "gcode"
+    ],
+    "gcode_macro print_end": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro _km_check_is_printing": [
+      "variable_debug_state",
+      "description",
+      "gcode"
+    ],
+    "gcode_macro _CG28": [
+      "gcode"
+    ],
+    "gcode_macro _CQGL": [
+      "gcode"
+    ],
+    "gcode_macro _ENSURE_EXTRUDER_TEMP": [
+      "gcode"
+    ],
+    "gcode_macro LOAD_FILAMENT": [
+      "gcode"
+    ],
+    "gcode_macro UNLOAD_FILAMENT": [
+      "gcode"
+    ],
+    "gcode_macro M600": [
+      "gcode"
+    ],
+    "gcode_macro CLEAN_NOZZLE": [
+      "variable_start_x",
+      "variable_start_y",
+      "variable_start_z",
+      "variable_range_x",
+      "variable_range_y",
+      "gcode"
+    ],
+    "gcode_macro PARK_FRONT": [
+      "gcode"
+    ],
+    "gcode_macro PARK": [
+      "gcode"
+    ],
+    "gcode_macro G28": [
+      "rename_existing",
+      "gcode"
+    ],
+    "gcode_macro QUAD_GANTRY_LEVEL": [
+      "rename_existing",
+      "gcode"
+    ],
+    "delayed_gcode _STOP_FILTER_DELAYED": [
+      "gcode"
+    ],
+    "gcode_macro M109": [
+      "rename_existing",
+      "gcode"
+    ],
+    "gcode_macro M190": [
+      "rename_existing",
+      "gcode"
+    ],
+    "gcode_macro SET_ACTIVE_SPOOL": [
+      "gcode"
+    ],
+    "gcode_macro CLEAR_ACTIVE_SPOOL": [
+      "gcode"
+    ],
+    "gcode_macro FLASH_LIGHTS": [
+      "gcode"
+    ],
+    "gcode_macro M106": [
+      "rename_existing",
+      "gcode"
+    ],
+    "gcode_macro M107": [
+      "rename_existing",
+      "gcode"
+    ],
+    "gcode_macro cooldown": [
+      "gcode"
+    ],
+    "neopixel toolhead_leds": [
+      "pin",
+      "chain_count",
+      "color_order"
+    ],
+    "led_effect weewoo_a": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect weewoo_b": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect effect_ready": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_logo_busy": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_logo_cleaning": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_logo_calibrating_z": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_logo_heating": [
+      "leds",
+      "autostart",
+      "frame_rate",
+      "layers"
+    ],
+    "led_effect toolhead_logo_cooling": [
+      "leds",
+      "autostart",
+      "frame_rate",
+      "layers"
+    ],
+    "led_effect toolhead_logo_homing": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_logo_leveling": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_logo_meshing": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_logo_printing": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_logo_standby": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_logo_part_ready": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_nozzle_heating": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_nozzle_cooling": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_nozzle_standby": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_nozzle_part_ready": [
+      "autostart",
+      "frame_rate",
+      "leds",
+      "layers"
+    ],
+    "led_effect toolhead_critical_error": [
+      "leds",
+      "layers",
+      "autostart",
+      "frame_rate",
+      "run_on_error"
+    ],
+    "led_effect rainbow": [
+      "leds",
+      "autostart",
+      "frame_rate",
+      "layers"
+    ],
+    "led_effect set_nozzle_leds": [
+      "leds",
+      "autostart",
+      "frame_rate",
+      "layers"
+    ],
+    "led_effect set_logo_leds": [
+      "leds",
+      "autostart",
+      "frame_rate",
+      "layers"
+    ],
+    "gcode_macro _set_logo_leds_off": [
+      "gcode"
+    ],
+    "gcode_macro _set_logo_leds_on": [
+      "gcode"
+    ],
+    "gcode_macro _set_nozzle_leds_on": [
+      "gcode"
+    ],
+    "gcode_macro _set_nozzle_leds_off": [
+      "gcode"
+    ],
+    "gcode_macro _status_off": [
+      "gcode"
+    ],
+    "gcode_macro _status_ready": [
+      "gcode"
+    ],
+    "gcode_macro _status_part_ready": [
+      "gcode"
+    ],
+    "gcode_macro _status_busy": [
+      "gcode"
+    ],
+    "gcode_macro _status_heating": [
+      "gcode"
+    ],
+    "gcode_macro _status_cooling": [
+      "gcode"
+    ],
+    "gcode_macro _status_leveling": [
+      "gcode"
+    ],
+    "gcode_macro _status_homing": [
+      "gcode"
+    ],
+    "gcode_macro _status_cleaning": [
+      "gcode"
+    ],
+    "gcode_macro _status_meshing": [
+      "gcode"
+    ],
+    "gcode_macro _status_calibrating_z": [
+      "gcode"
+    ],
+    "gcode_macro _status_printing": [
+      "gcode"
+    ],
+    "gcode_macro HEAT_SOAK": [
+      "variable_check_interval",
+      "variable_stage",
+      "variable_target_chamber_temp1",
+      "variable_target_chamber_temp2",
+      "variable_total_time_elapsed",
+      "gcode"
+    ],
+    "gcode_macro CANCEL_HEAT_SOAK": [
+      "gcode"
+    ],
+    "delayed_gcode heat_soaker": [
+      "gcode"
+    ],
+    "gcode_macro HEAT_SOAK_TOGGLE": [
+      "gcode"
+    ],
+    "gcode_macro TEST_SPEED": [
+      "description",
+      "gcode"
+    ],
+    "mcu": [
+      "canbus_uuid"
+    ],
+    "mcu ebb": [
+      "canbus_uuid"
+    ],
+    "printer": [
+      "kinematics",
+      "max_velocity",
+      "max_accel",
+      "max_z_velocity",
+      "max_z_accel",
+      "square_corner_velocity"
+    ],
+    "safe_z_home": [
+      "home_xy_position",
+      "speed",
+      "z_hop",
+      "z_hop_speed"
+    ],
+    "exclude_object": [],
+    "input_shaper": [
+      "shaper_type_x",
+      "shaper_freq_x",
+      "damping_ratio_x",
+      "shaper_type_y",
+      "shaper_freq_y",
+      "damping_ratio_y"
+    ],
+    "shaketune": [],
+    "stepper_x": [
+      "step_pin",
+      "dir_pin",
+      "enable_pin",
+      "microsteps",
+      "rotation_distance",
+      "endstop_pin",
+      "full_steps_per_rotation",
+      "position_min",
+      "position_endstop",
+      "position_max",
+      "homing_speed",
+      "homing_retract_dist",
+      "homing_positive_dir"
+    ],
+    "tmc2209 stepper_x": [
+      "uart_pin",
+      "interpolate",
+      "run_current",
+      "sense_resistor"
+    ],
+    "autotune_tmc stepper_x": [
+      "motor",
+      "tuning_goal"
+    ],
+    "stepper_y": [
+      "step_pin",
+      "dir_pin",
+      "enable_pin",
+      "microsteps",
+      "rotation_distance",
+      "full_steps_per_rotation",
+      "endstop_pin",
+      "position_min",
+      "position_endstop",
+      "position_max",
+      "homing_speed",
+      "homing_retract_dist",
+      "homing_positive_dir"
+    ],
+    "tmc2209 stepper_y": [
+      "uart_pin",
+      "interpolate",
+      "run_current",
+      "sense_resistor"
+    ],
+    "autotune_tmc stepper_y": [
+      "motor",
+      "tuning_goal"
+    ],
+    "stepper_z": [
+      "step_pin",
+      "dir_pin",
+      "enable_pin",
+      "rotation_distance",
+      "gear_ratio",
+      "microsteps",
+      "endstop_pin",
+      "position_max",
+      "position_min",
+      "homing_speed",
+      "second_homing_speed",
+      "homing_retract_dist"
+    ],
+    "tmc2209 stepper_z": [
+      "uart_pin",
+      "interpolate",
+      "run_current",
+      "sense_resistor"
+    ],
+    "autotune_tmc stepper_z": [
+      "motor"
+    ],
+    "stepper_z1": [
+      "step_pin",
+      "dir_pin",
+      "enable_pin",
+      "rotation_distance",
+      "gear_ratio",
+      "microsteps"
+    ],
+    "tmc2209 stepper_z1": [
+      "uart_pin",
+      "interpolate",
+      "run_current",
+      "sense_resistor"
+    ],
+    "autotune_tmc stepper_z1": [
+      "motor"
+    ],
+    "stepper_z2": [
+      "step_pin",
+      "dir_pin",
+      "enable_pin",
+      "rotation_distance",
+      "gear_ratio",
+      "microsteps"
+    ],
+    "tmc2209 stepper_z2": [
+      "uart_pin",
+      "interpolate",
+      "run_current",
+      "sense_resistor"
+    ],
+    "autotune_tmc stepper_z2": [
+      "motor"
+    ],
+    "stepper_z3": [
+      "step_pin",
+      "dir_pin",
+      "enable_pin",
+      "rotation_distance",
+      "gear_ratio",
+      "microsteps"
+    ],
+    "tmc2209 stepper_z3": [
+      "uart_pin",
+      "interpolate",
+      "run_current",
+      "sense_resistor"
+    ],
+    "autotune_tmc stepper_z3": [
+      "motor"
+    ],
+    "extruder": [
+      "step_pin",
+      "dir_pin",
+      "enable_pin",
+      "microsteps",
+      "rotation_distance",
+      "gear_ratio",
+      "nozzle_diameter",
+      "filament_diameter",
+      "heater_pin",
+      "sensor_type",
+      "sensor_pin",
+      "pressure_advance",
+      "min_temp",
+      "max_temp",
+      "min_extrude_temp",
+      "max_extrude_only_distance",
+      "max_extrude_cross_section",
+      "control",
+      "pid_kp",
+      "pid_ki",
+      "pid_kd",
+      "pid_version",
+      "pid_target",
+      "pid_tolerance"
+    ],
+    "tmc2209 extruder": [
+      "uart_pin",
+      "run_current",
+      "interpolate",
+      "sense_resistor"
+    ],
+    "autotune_tmc extruder": [
+      "motor",
+      "tuning_goal"
+    ],
+    "firmware_retraction": [
+      "retract_length",
+      "retract_speed",
+      "unretract_speed"
+    ],
+    "heater_bed": [
+      "heater_pin",
+      "sensor_type",
+      "sensor_pin",
+      "max_power",
+      "min_temp",
+      "max_temp",
+      "control",
+      "pid_kp",
+      "pid_ki",
+      "pid_kd"
+    ],
+    "heater_fan hotend_fan": [
+      "pin",
+      "max_power",
+      "kick_start_time",
+      "heater",
+      "heater_temp",
+      "fan_speed"
+    ],
+    "fan": [
+      "pin",
+      "kick_start_time"
+    ],
+    "temperature_sensor chamber": [
+      "sensor_type",
+      "sensor_pin",
+      "max_temp"
+    ],
+    "temperature_sensor mcu": [
+      "sensor_type",
+      "max_temp"
+    ],
+    "temperature_sensor carto": [
+      "sensor_type",
+      "sensor_mcu",
+      "min_temp",
+      "max_temp"
+    ],
+    "fan_generic filter": [
+      "pin",
+      "kick_start_time"
+    ],
+    "fan_generic bed": [
+      "pin",
+      "kick_start_time"
+    ],
+    "controller_fan electronics_fans": [
+      "pin",
+      "max_power",
+      "heater",
+      "stepper"
+    ],
+    "multi_pin electronics_aux_pins": [
+      "pins"
+    ],
+    "temperature_fan host": [
+      "pin",
+      "kick_start_time",
+      "target_temp",
+      "min_speed",
+      "max_speed",
+      "sensor_type",
+      "control",
+      "max_delta",
+      "min_temp",
+      "max_temp"
+    ],
+    "output_pin daylight_left": [
+      "pin",
+      "pwm",
+      "shutdown_value",
+      "cycle_time",
+      "value"
+    ],
+    "output_pin daylight_right": [
+      "pin",
+      "pwm",
+      "shutdown_value",
+      "cycle_time",
+      "value"
+    ],
+    "filter_monitor filter_monitor": [
+      "fan",
+      "max_runtime_hours",
+      "max_days",
+      "interval",
+      "stats_caption"
+    ],
+    "quad_gantry_level": [
+      "gantry_corners",
+      "points",
+      "speed",
+      "horizontal_move_z",
+      "retries",
+      "retry_tolerance",
+      "max_adjust",
+      "adaptive_horizontal_move_z",
+      "min_horizontal_move_z"
+    ],
+    "mcu carto": [
+      "canbus_uuid"
+    ],
+    "scanner": [
+      "mcu",
+      "x_offset",
+      "y_offset",
+      "backlash_comp",
+      "mode",
+      "sensor",
+      "sensor_alt",
+      "mesh_runs",
+      "scanner_touch_threshold",
+      "scanner_touch_z_offset"
+    ],
+    "bed_mesh": [
+      "zero_reference_position",
+      "speed",
+      "horizontal_move_z",
+      "mesh_min",
+      "mesh_max",
+      "algorithm",
+      "probe_count"
+    ],
+    "adxl345": [
+      "cs_pin",
+      "spi_software_sclk_pin",
+      "spi_software_mosi_pin",
+      "spi_software_miso_pin",
+      "axes_map"
+    ],
+    "resonance_tester": [
+      "accel_chip",
+      "probe_points"
+    ],
+    "scanner model default": [
+      "model_coef",
+      "model_domain",
+      "model_range",
+      "model_temp",
+      "model_offset"
+    ],
+    "bed_mesh default": [
+      "version",
+      "points",
+      "x_count",
+      "y_count",
+      "mesh_x_pps",
+      "mesh_y_pps",
+      "algo",
+      "tension",
+      "min_x",
+      "max_x",
+      "min_y",
+      "max_y"
+    ],
+    "gcode_macro excitate_axis_at_freq": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro axes_map_calibration": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro compare_belts_responses": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro axes_shaper_calibration": [
+      "description",
+      "gcode"
+    ],
+    "gcode_macro create_vibrations_profile": [
+      "description",
+      "gcode"
+    ]
+  },
+  "objects": [
+    "gcode",
+    "gcode_io",
+    "webhooks",
+    "configfile",
+    "danger_options",
+    "pins",
+    "canbus_ids",
+    "mcu",
+    "mcu ebb",
+    "mcu carto",
+    "gcode_move",
+    "print_stats",
+    "gcode_macro",
+    "virtual_sdcard",
+    "pause_resume",
+    "display_status",
+    "respond",
+    "gcode_macro CANCEL_PRINT",
+    "gcode_macro PAUSE",
+    "gcode_macro RESUME",
+    "gcode_macro SET_PAUSE_NEXT_LAYER",
+    "gcode_macro SET_PAUSE_AT_LAYER",
+    "gcode_macro SET_PRINT_STATS_INFO",
+    "gcode_macro _TOOLHEAD_PARK_PAUSE_CANCEL",
+    "gcode_macro _CLIENT_EXTRUDE",
+    "gcode_macro _CLIENT_RETRACT",
+    "gcode_macro _CLIENT_LINEAR_MOVE",
+    "gcode_macro GET_TIMELAPSE_SETUP",
+    "gcode_macro _SET_TIMELAPSE_SETUP",
+    "gcode_macro TIMELAPSE_TAKE_FRAME",
+    "gcode_macro _TIMELAPSE_NEW_FRAME",
+    "delayed_gcode _WAIT_TIMELAPSE_TAKE_FRAME",
+    "gcode_macro HYPERLAPSE",
+    "delayed_gcode _HYPERLAPSE_LOOP",
+    "gcode_macro TIMELAPSE_RENDER",
+    "delayed_gcode _WAIT_TIMELAPSE_RENDER",
+    "gcode_macro TEST_STREAM_DELAY",
+    "gcode_macro print_start",
+    "gcode_macro print_end",
+    "gcode_macro _km_check_is_printing",
+    "gcode_macro _CG28",
+    "gcode_macro _CQGL",
+    "gcode_macro _ENSURE_EXTRUDER_TEMP",
+    "gcode_macro LOAD_FILAMENT",
+    "gcode_macro UNLOAD_FILAMENT",
+    "gcode_macro M600",
+    "gcode_macro CLEAN_NOZZLE",
+    "gcode_macro PARK_FRONT",
+    "gcode_macro PARK",
+    "gcode_macro G28",
+    "gcode_macro QUAD_GANTRY_LEVEL",
+    "delayed_gcode _STOP_FILTER_DELAYED",
+    "gcode_macro M109",
+    "gcode_macro M190",
+    "gcode_macro SET_ACTIVE_SPOOL",
+    "gcode_macro CLEAR_ACTIVE_SPOOL",
+    "gcode_macro FLASH_LIGHTS",
+    "gcode_macro M106",
+    "gcode_macro M107",
+    "gcode_macro cooldown",
+    "display_template",
+    "led",
+    "neopixel toolhead_leds",
+    "led_effect",
+    "led_effect weewoo_a",
+    "led_effect weewoo_b",
+    "led_effect effect_ready",
+    "led_effect toolhead_logo_busy",
+    "led_effect toolhead_logo_cleaning",
+    "led_effect toolhead_logo_calibrating_z",
+    "led_effect toolhead_logo_heating",
+    "led_effect toolhead_logo_cooling",
+    "led_effect toolhead_logo_homing",
+    "led_effect toolhead_logo_leveling",
+    "led_effect toolhead_logo_meshing",
+    "led_effect toolhead_logo_printing",
+    "led_effect toolhead_logo_standby",
+    "led_effect toolhead_logo_part_ready",
+    "led_effect toolhead_nozzle_heating",
+    "led_effect toolhead_nozzle_cooling",
+    "led_effect toolhead_nozzle_standby",
+    "led_effect toolhead_nozzle_part_ready",
+    "led_effect toolhead_critical_error",
+    "led_effect rainbow",
+    "led_effect set_nozzle_leds",
+    "led_effect set_logo_leds",
+    "gcode_macro _set_logo_leds_off",
+    "gcode_macro _set_logo_leds_on",
+    "gcode_macro _set_nozzle_leds_on",
+    "gcode_macro _set_nozzle_leds_off",
+    "gcode_macro _status_off",
+    "gcode_macro _status_ready",
+    "gcode_macro _status_part_ready",
+    "gcode_macro _status_busy",
+    "gcode_macro _status_heating",
+    "gcode_macro _status_cooling",
+    "gcode_macro _status_leveling",
+    "gcode_macro _status_homing",
+    "gcode_macro _status_cleaning",
+    "gcode_macro _status_meshing",
+    "gcode_macro _status_calibrating_z",
+    "gcode_macro _status_printing",
+    "gcode_macro HEAT_SOAK",
+    "gcode_macro CANCEL_HEAT_SOAK",
+    "delayed_gcode heat_soaker",
+    "gcode_macro HEAT_SOAK_TOGGLE",
+    "gcode_macro TEST_SPEED",
+    "homing",
+    "safe_z_home",
+    "exclude_object",
+    "input_shaper",
+    "gcode_macro excitate_axis_at_freq",
+    "gcode_macro axes_map_calibration",
+    "gcode_macro compare_belts_responses",
+    "gcode_macro axes_shaper_calibration",
+    "gcode_macro create_vibrations_profile",
+    "shaketune",
+    "tmc_uart",
+    "stepper_enable",
+    "tmc2209 stepper_x",
+    "motor_constants ldo-36sth17-1004ahg",
+    "motor_constants ldo-36sth20-1004ahg-9T",
+    "motor_constants ldo-36sth20-1004ahg",
+    "motor_constants ldo-35sth52-1504ah",
+    "motor_constants ldo-42sth47-1684a",
+    "motor_constants ldo-35sth48-1684ah",
+    "motor_constants ldo-36sth17-0354ahg",
+    "motor_constants ldo-42sth40-1684cl350et",
+    "motor_constants ldo-42sth40-1684l300e",
+    "motor_constants ldo-42sth40-1684ac",
+    "motor_constants ldo-42sth40-2004mah",
+    "motor_constants ldo-42sth48-1684mah",
+    "motor_constants ldo-42sth48-2804ah",
+    "motor_constants ldo-42sth48-2504ac",
+    "motor_constants ldo-42sth48-2504ah",
+    "motor_constants ldo-42sth48-2004ac",
+    "motor_constants ldo-42sth48-2004mah",
+    "motor_constants ldo-42sth40-1004a",
+    "motor_constants ldo-42sth34-1004l321e",
+    "motor_constants ldo-42sth40-1004mah",
+    "motor_constants ldo-42sth20-1004ash",
+    "motor_constants ldo-42sth25-1004cl200et",
+    "motor_constants ldo-42sth25-1004acg",
+    "motor_constants ldo-42sth60-2004ac",
+    "motor_constants ldo-42sth60-2004mah",
+    "motor_constants ldo-42sth25-1404ac",
+    "motor_constants moons-ms14hs5p4200",
+    "motor_constants moons-ms14hs5p4150",
+    "motor_constants moons-cse14hra1l410a",
+    "motor_constants moons-ms17hdbp4200",
+    "motor_constants moons-ms17hd6p4200",
+    "motor_constants moons-ms17hd6p4150",
+    "motor_constants moons-le174s-t0804-300-ar3-s-150",
+    "motor_constants moons-le174s-t0808-200-ar3-s-065",
+    "motor_constants moons-ms17hd6p420I-04",
+    "motor_constants moons-ms17hd6p420I-05",
+    "motor_constants moons-c17hd2024n-01n",
+    "motor_constants moons-ml23hs8l4550-20",
+    "motor_constants moons-ml23hs0l4350-000",
+    "motor_constants omc-14ms20-1504s",
+    "motor_constants omc-14hs20-1504s",
+    "motor_constants omc-14hr07-1004vrn",
+    "motor_constants omc-14hs17-0504s",
+    "motor_constants omc-14hs10-0404s",
+    "motor_constants omc-17he19-2004s",
+    "motor_constants omc-17he15-1504s",
+    "motor_constants omc-17hs15-1504s",
+    "motor_constants omc-17hm19-1684S",
+    "motor_constants omc-17hm19-2004s",
+    "motor_constants omc-17hs19-2504s-h",
+    "motor_constants omc-17hs24-2104s",
+    "motor_constants omc-17hs19-2004s1",
+    "motor_constants omc-17hs08-1004s",
+    "motor_constants omc-17me15-1504s",
+    "motor_constants tmc-qsh4218-35-10-027",
+    "motor_constants tmc-qsh4218-41-10-035",
+    "motor_constants tmc-qsh4218-51-10-049",
+    "motor_constants tmc-qsh4218-47-28-040",
+    "motor_constants fysetc-g36hsy4405-6d-80a",
+    "motor_constants fysetc-g36hsy4407-6d-1200a",
+    "motor_constants fysetc-g36hsy4405-6d-30",
+    "motor_constants fysetc-35hsh7402-24b-60a",
+    "motor_constants fysetc-35hsh7402-24b-60b",
+    "motor_constants fysetc-42hsc1433b-200n8",
+    "motor_constants fysetc-42hsc1404b-200n8",
+    "motor_constants TB-3544",
+    "motor_constants fysetc-17HS19-2004S-C",
+    "motor_constants fysetc-42HC40-204A-300N84",
+    "motor_constants fysetc-17D2201Z-22B-500",
+    "motor_constants dfh-14mcrn-1848",
+    "motor_constants dfh-14mcrn-1815",
+    "motor_constants zyltech-17hd48002h-22b",
+    "motor_constants siboor-14sth20-1004a",
+    "motor_constants siboor-35sth52-1204a",
+    "motor_constants siboor-35hbx904-22b",
+    "motor_constants siboor-42sth26-0804a",
+    "motor_constants siboor-42sth40-2004a",
+    "motor_constants siboor-42sth48-2504(s45)",
+    "motor_constants siboor-42sth28-0804a",
+    "motor_constants wantai-42byghw811",
+    "motor_constants ldo-42sth60-3004ac",
+    "motor_constants ldo-42sth60-3004mac",
+    "motor_constants qidi-BJ42D29-28V07",
+    "motor_constants qidi-BJ42D29-22V08",
+    "motor_constants qidi-BJY36D12-04V13",
+    "motor_constants creality-42-34",
+    "motor_constants creality-42-40",
+    "motor_constants creality-42-48",
+    "motor_constants creality-42-60",
+    "motor_constants BJ42D09-20V02",
+    "motor_constants bondtech-42H025H-0704A-005",
+    "motor_constants orientalmotor-PKP245D23A",
+    "motor_constants orientalmotor-PKP245D15A",
+    "motor_constants orientalmotor-PKP235D23A",
+    "motor_constants orientalmotor-PKP235D15A",
+    "motor_constants flsun-v400-42",
+    "motor_constants flsun-v400-36",
+    "motor_constants honeybadger-42hs48-25044a",
+    "motor_constants motech-mt-1701hsm140ae",
+    "motor_constants motech-mt-1702e133g6-365e",
+    "motor_constants motech-mt-1703hs120ag518e",
+    "motor_constants motech-mt-1703hsm168re",
+    "motor_constants motech-mt-1704hsm168re",
+    "motor_constants motech-mt-1705hs200ae",
+    "motor_constants BTT-17H4401S",
+    "motor_constants ok42sth34-044e-200g",
+    "motor_constants jinkong-jk42hs34-1334",
+    "motor_constants monoprice-42hb34f08ab",
+    "motor_constants monoprice-17hs4401s",
+    "motor_constants oukeda-ok42hc40-204a306n84",
+    "motor_constants oukeda-17hs4401",
+    "motor_constants trianglelab-tl-42bygh20",
+    "motor_constants bj42d41-14v06",
+    "motor_constants bjd42d22-53v02",
+    "motor_constants geetech-d42hs3418-24b22",
+    "motor_constants usongshine-17hs4023",
+    "motor_constants mercury-42byg011-25",
+    "motor_constants cloudray-17CS07A-180E",
+    "motor_constants act-17hs4417",
+    "motor_constants jkong-jk42hS40-1704",
+    "motor_constants biqu-35BYGF0713-A-10HZT",
+    "autotune_tmc stepper_x",
+    "tmc2209 stepper_y",
+    "autotune_tmc stepper_y",
+    "tmc2209 stepper_z",
+    "autotune_tmc stepper_z",
+    "tmc2209 stepper_z1",
+    "autotune_tmc stepper_z1",
+    "tmc2209 stepper_z2",
+    "autotune_tmc stepper_z2",
+    "tmc2209 stepper_z3",
+    "autotune_tmc stepper_z3",
+    "tmc2209 extruder",
+    "autotune_tmc extruder",
+    "firmware_retraction",
+    "heaters",
+    "adc_temperature",
+    "bme280",
+    "ds18b20",
+    "htu21d",
+    "sht3x",
+    "aht10",
+    "lm75",
+    "spi_temperature",
+    "temperature_host",
+    "temperature_mcu",
+    "temperature_combined",
+    "thermistor ATC Semitec 104GT-2",
+    "thermistor ATC Semitec 104NT-4-R025H42G",
+    "thermistor EPCOS 100K B57560G104F",
+    "thermistor Generic 3950",
+    "thermistor SliceEngineering 450",
+    "thermistor TDK NTCG104LH104JT1",
+    "thermistor Honeywell 100K 135-104LAG-J01",
+    "thermistor NTC 100K MGB18-104F39050L32",
+    "query_adc",
+    "verify_heater heater_bed",
+    "pid_calibrate",
+    "heater_bed",
+    "heater_fan hotend_fan",
+    "fan",
+    "temperature_sensor chamber",
+    "temperature_sensor mcu",
+    "temperature_sensor carto",
+    "fan_generic filter",
+    "fan_generic bed",
+    "controller_fan electronics_fans",
+    "multi_pin electronics_aux_pins",
+    "temperature_host host",
+    "temperature_fan host",
+    "output_pin daylight_left",
+    "output_pin daylight_right",
+    "filter_monitor filter_monitor",
+    "quad_gantry_level",
+    "bed_mesh",
+    "probe",
+    "temperature_sensor cartographer_coil",
+    "scanner",
+    "adxl345",
+    "resonance_tester",
+    "scanner model default",
+    "force_move",
+    "telemetry",
+    "motion_report",
+    "query_endstops",
+    "idle_timeout",
+    "system_stats",
+    "statistics",
+    "manual_probe",
+    "tuning_tower",
+    "toolhead",
+    "verify_heater extruder",
+    "extruder"
+  ]
+}
