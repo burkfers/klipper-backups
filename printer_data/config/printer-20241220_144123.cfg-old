@@ -1,11 +1,8 @@
-[include mmu/base/*.cfg]
-[include mmu/optional/client_macros.cfg]
-[include mmu/addons/mmu_erec_cutter.cfg]
-[include mmu/addons/blobifier.cfg]
 [include mainsail.cfg]
 [include timelapse.cfg]
 [include start_end.cfg]
 [include macros.cfg]
+#[include toolhead_leds.cfg]
 [include led_animations.cfg]
 [include heat_soak.cfg]
 [include test_speed.cfg]
@@ -64,6 +61,13 @@ damping_ratio_y: 0.082
 #    printer.cfg file. If you want to see the macros in the webui, set this to True.
 # timeout: 300
 #    The maximum time in seconds to let Shake&Tune process the CSV files and generate the graphs.
+
+[filament_switch_sensor extruder_pre]
+pause_on_runout: False
+switch_pin: ^ebb:PB9
+[filament_switch_sensor extruder_post]
+pause_on_runout: False
+switch_pin: ^ebb:PB8
 
 #####################################################################
 # 	A/B Motors
@@ -433,7 +437,7 @@ retry_tolerance: 0.0075
 #retry_tolerance: 0.0126
 max_adjust: 10
 adaptive_horizontal_move_z: true
-min_horizontal_move_z: 0.5
+min_horizontal_move_z: 1
 
 #####################################################################
 #       Scanner
@@ -519,26 +523,26 @@ probe_points:
 #*# pid_kd = 330.588
 #*#
 #*# [scanner model default]
-#*# model_coef = 1.6104665436949046,
-#*# 	  1.9553634284370316,
-#*# 	  0.7133180033898864,
-#*# 	  0.2145634857225654,
-#*# 	  0.4273646689040846,
-#*# 	  0.5766235112112783,
-#*# 	  -0.36782007922864746,
-#*# 	  -0.5508262813563505,
-#*# 	  0.2688223717946777,
-#*# 	  0.25812316404138924
-#*# model_domain = 3.2967905795201314e-07,3.357839986982293e-07
+#*# model_coef = 1.5358781954121168,
+#*# 	1.8812202521345214,
+#*# 	0.7493496214212011,
+#*# 	0.27806990254385594,
+#*# 	0.37773551209522177,
+#*# 	0.5164498158537885,
+#*# 	-0.25179249836123285,
+#*# 	-0.48743728825824595,
+#*# 	0.23953627470482727,
+#*# 	0.26339043089662595
+#*# model_domain = 3.269331433873912e-07,3.35365032176973e-07
 #*# model_range = 0.200000,5.100000
-#*# model_temp = 39.118672
+#*# model_temp = 26.331283
 #*# model_offset = 0.00000
 #*# model_mode = touch
 #*# model_fw_version = CARTOGRAPHER 5.1.0
 #*#
 #*# [scanner]
-#*# scanner_touch_threshold = 1000
-#*# scanner_touch_z_offset = 0.060
+#*# scanner_touch_threshold = 1500
+#*# scanner_touch_z_offset = 0.000
 #*# mode = touch
 #*# scanner_touch_speed = 3
 #*#

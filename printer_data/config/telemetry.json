@@ -796,7 +796,6 @@
     "gcode_io",
     "webhooks",
     "configfile",
-    "danger_options",
     "pins",
     "canbus_ids",
     "mcu",
