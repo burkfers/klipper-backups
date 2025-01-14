@@ -1,6 +1,4 @@
-[include mmu/base/*.cfg]
-[include mmu/optional/client_macros.cfg]
-#[include mmu/addons/mmu_erec_cutter.cfg]
+[include mmu/addons/mmu_erec_cutter.cfg]
 [include mmu/addons/blobifier.cfg]
 [include timelapse.cfg]
 [include start_end.cfg]
@@ -537,7 +535,7 @@ probe_points:
 #*#
 #*# [scanner]
 #*# scanner_touch_threshold = 1250
-#*# scanner_touch_z_offset = 0.080
+#*# scanner_touch_z_offset = 0.070
 #*# mode = touch
 #*# scanner_touch_speed = 3
 #*#
