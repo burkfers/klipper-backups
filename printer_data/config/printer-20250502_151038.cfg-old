@@ -164,11 +164,11 @@ sense_resistor: 0.110
 motor: moons-ms17hd6p4200 
 # tuning_goal: performance
 
-# Z2: back right
+# Z2: back right - on M6
 [stepper_z2]
-step_pin: PC9
-dir_pin: PC8
-enable_pin: !PD1
+step_pin: PA10
+dir_pin: PA14
+enable_pin: !PA15
 rotation_distance: 40
 gear_ratio: 80:16
 microsteps: 32
@@ -184,11 +184,11 @@ sense_resistor: 0.110
 motor: moons-ms17hd6p4200 
 # tuning_goal: performance
 
-# Z3: front right
+# Z3: front right - on M5
 [stepper_z3]
-step_pin: PA10
-dir_pin: !PA14
-enable_pin: !PA15
+step_pin: PC9
+dir_pin: !PC8
+enable_pin: !PD1
 rotation_distance: 40
 gear_ratio: 80:16
 microsteps: 32
@@ -475,8 +475,8 @@ zero_reference_position: 150, 150
 speed: 300
 #speed: 75
 horizontal_move_z: 5
-mesh_min: 50, 30
-mesh_max: 250, 260
+mesh_min: 40, 24.4
+mesh_max: 260, 250
 algorithm: bicubic
 #probe_count: 10, 10
 probe_count: 7, 7
