@@ -4,3 +4,4 @@
 
 - [gerhard](../../tree/gerhard/)
 - [tinkerbell](../../tree/tinkerbell/)
+- [hamlet](../../tree/hamlet/)
