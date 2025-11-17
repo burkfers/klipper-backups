@@ -23,12 +23,12 @@ cors_domains:
 server: http://spoolman.btz
 sync_rate: 5
 
-[webcam Camera]
-service: mjpegstreamer-adaptive
-location: dunno
-target_fps_idle: 1
-stream_url: /webcam?action=stream
-snapshot_url: /webcam/?action=snapshot
+[update_manager klipper-backup]
+type: git_repo
+path: ~/klipper-backup
+origin: https://github.com/Staubgeborener/klipper-backup.git
+managed_services: moonraker
+primary_branch: main
 
 [file_manager]
 enable_object_processing: True
@@ -37,13 +37,6 @@ queue_gcode_uploads: True
 [update_manager]
 channel: dev
 refresh_interval: 168
-
-[update_manager klipper-backup]
-type: git_repo
-path: ~/klipper-backup
-origin: https://github.com/Staubgeborener/klipper-backup.git
-managed_services: moonraker
-primary_branch: main
 
 [update_manager fluidd]
 path: /home/brm/fluidd
@@ -104,11 +97,3 @@ origin: https://github.com/julianschill/klipper-led_effect.git
 is_system_service: False
 
 
-
-# Crowsnest update_manager entry
-[update_manager crowsnest]
-type: git_repo
-path: ~/crowsnest
-origin: https://github.com/mainsail-crew/crowsnest.git
-managed_services: crowsnest
-install_script: tools/pkglist.sh
