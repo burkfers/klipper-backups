@@ -1,0 +1,261 @@
+/* ============================================================
+   Fluidd contrast boost — Vuetify 2 overrides
+   Drop into <printer_data>/config/.fluidd-theme/custom.css
+   Then hard-reload Fluidd (Ctrl+Shift+R).
+   ============================================================ */
+
+
+/* ============================================================
+   PART 1 — GLOBAL TEXT CONTRAST (everywhere outside the console)
+   ============================================================ */
+
+/* ---------- DARK THEME ---------- */
+/* Vuetify 2 dark defaults are deliberately low-contrast:
+     primary text:   #FFFFFF
+     secondary text: rgba(255,255,255,0.70)   <- the dim one
+     disabled text:  rgba(255,255,255,0.50)
+   We push secondary/disabled much closer to full white. */
+
+.theme--dark.v-application,
+.theme--dark.v-application .text--primary,
+.theme--dark.v-application .v-card__title,
+.theme--dark.v-application .v-list-item__title,
+.theme--dark.v-application .v-toolbar__title {
+  color: #ffffff !important;
+}
+
+.theme--dark.v-application .text--secondary,
+.theme--dark.v-application .v-list-item__subtitle,
+.theme--dark.v-application .v-card__subtitle,
+.theme--dark.v-application .v-label,
+.theme--dark.v-application .v-messages,
+.theme--dark.v-application .v-data-table,
+.theme--dark.v-application .v-data-table__wrapper,
+.theme--dark.v-application .v-data-table th,
+.theme--dark.v-application .v-data-table td,
+.theme--dark.v-application .v-input,
+.theme--dark.v-application .v-select__selection,
+.theme--dark.v-application .v-stepper__label,
+.theme--dark.v-application .v-tab,
+.theme--dark.v-application .v-breadcrumbs__item {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.theme--dark.v-application .text--disabled,
+.theme--dark.v-application .v-input--is-disabled,
+.theme--dark.v-application .v-label--is-disabled,
+.theme--dark.v-application input::placeholder,
+.theme--dark.v-application textarea::placeholder {
+  color: rgba(255, 255, 255, 0.75) !important;
+  opacity: 1 !important; /* Firefox dims placeholders by default */
+}
+
+/* Table headers are usually the worst offenders */
+.theme--dark.v-application .v-data-table > .v-data-table__wrapper > table > thead > tr > th {
+  color: #ffffff !important;
+}
+
+/* Hover/striped row text */
+.theme--dark.v-application .v-data-table tbody tr:hover td,
+.theme--dark.v-application .v-data-table tbody tr td {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Tabs that go gray when inactive */
+.theme--dark.v-application .v-tab:not(.v-tab--active) {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Icons that pick up theme colors */
+.theme--dark.v-application .v-icon.notranslate {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+
+/* ---------- LIGHT THEME ---------- */
+/* Vuetify 2 light defaults:
+     primary:   rgba(0,0,0,0.87)
+     secondary: rgba(0,0,0,0.60)
+     disabled:  rgba(0,0,0,0.38)
+   Push them toward solid black. */
+
+.theme--light.v-application,
+.theme--light.v-application .text--primary {
+  color: #000000 !important;
+}
+
+.theme--light.v-application .text--secondary,
+.theme--light.v-application .v-list-item__subtitle,
+.theme--light.v-application .v-card__subtitle,
+.theme--light.v-application .v-label,
+.theme--light.v-application .v-messages,
+.theme--light.v-application .v-data-table th,
+.theme--light.v-application .v-data-table td,
+.theme--light.v-application .v-input,
+.theme--light.v-application .v-tab {
+  color: rgba(0, 0, 0, 0.92) !important;
+}
+
+.theme--light.v-application .text--disabled,
+.theme--light.v-application input::placeholder,
+.theme--light.v-application textarea::placeholder {
+  color: rgba(0, 0, 0, 0.70) !important;
+  opacity: 1 !important;
+}
+
+.theme--light.v-application .v-data-table > .v-data-table__wrapper > table > thead > tr > th {
+  color: #000000 !important;
+}
+
+
+/* ============================================================
+   PART 2 — CONSOLE-SPECIFIC OVERRIDES
+   The console uses .console / .console-item / .console-entry-widget
+   and entry text uses semantic color classes (primary--text,
+   error--text, etc.).
+   ============================================================ */
+
+/* ---------- DARK THEME CONSOLE ---------- */
+
+/* Base console text + real monospace font */
+.theme--dark.v-application .console,
+.theme--dark.v-application .console .console-item,
+.theme--dark.v-application .console-entry-widget {
+  color: #f0f0f0 !important;
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code",
+               "SF Mono", Menlo, Consolas, monospace !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+/* Timestamp — Fluidd uses "grey--text text--darken-2" which is
+   almost invisible on dark bg. Force a readable mid-grey. */
+.theme--dark.v-application .console .grey--text.text--darken-2,
+.theme--dark.v-application .console-entry-widget .grey--text.text--darken-2 {
+  color: #a0a8b4 !important;
+}
+
+/* Echoed commands (what you typed) — follows YOUR accent color
+   from Fluidd Settings → Theme. If too dim, swap base for
+   lighten1/lighten2. */
+.theme--dark.v-application .console .primary--text,
+.theme--dark.v-application .console-entry-widget .primary--text {
+  color: var(--v-primary-base) !important;
+  font-weight: 600 !important;
+}
+
+/* Regular printer responses */
+.theme--dark.v-application .console .secondary--text,
+.theme--dark.v-application .console-entry-widget .secondary--text {
+  color: #e8e8e8 !important;
+}
+
+/* Echo / info lines (// ...) — soft yellow.
+   Hardcoded because semantic meaning matters more than theme match. */
+.theme--dark.v-application .console .info--text,
+.theme--dark.v-application .console-entry-widget .info--text {
+  color: #ffd54f !important;
+}
+
+/* Errors (!! ...) — always red, regardless of accent color */
+.theme--dark.v-application .console .error--text,
+.theme--dark.v-application .console-entry-widget .error--text {
+  color: #ff5252 !important;
+  font-weight: 600 !important;
+}
+
+/* Warnings — always orange */
+.theme--dark.v-application .console .warning--text,
+.theme--dark.v-application .console-entry-widget .warning--text {
+  color: #ffb74d !important;
+}
+
+/* Success / OK — always green */
+.theme--dark.v-application .console .success--text,
+.theme--dark.v-application .console-entry-widget .success--text {
+  color: #66bb6a !important;
+}
+
+/* Clickable G-code commands — obvious link affordance */
+.theme--dark.v-application .console a,
+.theme--dark.v-application .console-entry-widget a,
+.theme--dark.v-application .console .pointer {
+  color: #82b1ff !important;
+}
+
+/* Console input field at the bottom */
+.theme--dark.v-application .console-wrapper .v-input,
+.theme--dark.v-application .console-wrapper input {
+  color: #ffffff !important;
+  font-family: "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace !important;
+}
+
+.theme--dark.v-application .console-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1 !important;
+}
+
+/* Darken the console background slightly so colored text pops more.
+   Comment out if you prefer Fluidd's default tertiary background. */
+.theme--dark.v-application .console {
+  background-color: #15171c !important;
+}
+
+
+/* ---------- LIGHT THEME CONSOLE ---------- */
+
+.theme--light.v-application .console,
+.theme--light.v-application .console .console-item,
+.theme--light.v-application .console-entry-widget {
+  color: #111 !important;
+  font-family: "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+.theme--light.v-application .console .grey--text.text--darken-2,
+.theme--light.v-application .console-entry-widget .grey--text.text--darken-2 {
+  color: #555 !important;
+}
+
+/* Echoed commands follow your accent in light mode too */
+.theme--light.v-application .console .primary--text,
+.theme--light.v-application .console-entry-widget .primary--text {
+  color: var(--v-primary-base) !important;
+  font-weight: 600 !important;
+}
+
+.theme--light.v-application .console .info--text    { color: #b26a00 !important; }
+.theme--light.v-application .console .error--text   { color: #c62828 !important; font-weight: 600 !important; }
+.theme--light.v-application .console .warning--text { color: #ef6c00 !important; }
+.theme--light.v-application .console .success--text { color: #2e7d32 !important; }
+
+
+/* ============================================================
+   PART 3 — OPTIONAL TWEAKS (uncomment as desired)
+   ============================================================ */
+
+/* Slightly bolder body weight everywhere if text feels too thin */
+/*
+.v-application,
+.v-data-table {
+  font-weight: 450 !important;
+}
+*/
+
+/* Nuclear option: force every text element to full white in dark mode.
+   Only use if targeted rules aren't enough — can make colored chips
+   and badges look slightly off. */
+/*
+.theme--dark.v-application * {
+  color: #fff !important;
+}
+*/
+
+/* If accent color comes out too dim against console background,
+   switch echoed commands to a lighter variant: */
+/*
+.theme--dark.v-application .console .primary--text {
+  color: var(--v-primary-lighten2) !important;
+}
+*/

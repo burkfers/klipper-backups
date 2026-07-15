@@ -203,11 +203,10 @@ virtualenv: /home/brm/klippy-env/
 requirements: wiki/requirements.txt
 system_dependencies: wiki/packages.json
 
-
-[update_manager Happy-Hare-RFID-Reader]
+[update_manager emu_nfc_reader]
 type:             git_repo
-path:             /home/brm/rfid-reader
-origin:           https://github.com/cwiegert/Happy-Hare-RFID-Reader.git
+path:             /home/brm/HH-RFID-Reader
+origin:           https://github.com/cwiegert/HH-RFID-Reader.git
 primary_branch:   main
 managed_services: klipper
 install_script:   install.sh
