@@ -1,6 +1,3 @@
-# Happy Hare MMU includes (should be near top of file)
-[include mmu/base/*.cfg]
-[include mmu/macros/*.cfg]
 [include fluidd.cfg]
 [include boards/m8pv2.cfg]
 [include boards/ebb36.cfg]
@@ -9,9 +6,6 @@
 [include led.cfg]
 [include T0.cfg]
 [include KOMB.cfg]
-
-# Happy Hare Client macros (should be after last include or other PAUSE/CANCEL macros)
-[include mmu/optional/client_macros.cfg]
 
 [mcu]
 canbus_uuid: 1240e1d83c52

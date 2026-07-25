@@ -136,8 +136,7 @@ managed_services: klipper
 install_script:   install.sh
 info_tags:        desc=EMU NFC Gate Reader for Happy Hare
 
-[update_manager happy-hare]
-type: git_repo
+[update_manager happy-hare]type: git_repo
 path: /home/brm/Happy-Hare
 origin: https://github.com/moggieuk/Happy-Hare.git
 primary_branch: main
